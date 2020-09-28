@@ -140,7 +140,7 @@ switch ($method) {
         
         switch ($path_info) {
            
-            case '/retiro': //pto5
+            case '/retiro/': //pto5
                 $header = getallheaders();
                 $token = $header['token'] ?? '';
                 
@@ -162,7 +162,8 @@ switch ($method) {
             break;
 
             default:
-                # code...
+            $response->msg = 'invalid request';
+            $response->status = 'fail';
                 break;
         }
 }
