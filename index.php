@@ -138,9 +138,9 @@ switch ($method) {
 
     case 'GET':
         
-        switch ($path_info) {
+       
            
-            case '/retiro/': //pto5
+           
                 $header = getallheaders();
                 $token = $header['token'] ?? '';
                 
@@ -159,12 +159,9 @@ switch ($method) {
                         $response->status = 'fail';
                     }
                 }
-            break;
+        
 
-            default:
-            $response->msg = 'invalid request';
-            $response->status = 'fail';
-                break;
-        }
+          
+       
 }
 echo json_encode($response);
