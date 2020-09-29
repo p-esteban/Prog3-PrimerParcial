@@ -149,15 +149,15 @@ switch ($method) {
 
                 if (isset($response->data) && $response->data->type == 'user') {
                     
-                    if (isset($_GET['patente'])) {
+                   
                        
                         $response = vehiculo::withdraw($_GET['patente']);
 
 
-                    }else{
+                  
                         $response->msg = 'incorrect data';
                         $response->status = 'fail';
-                    }
+                   
                 }
         
 
